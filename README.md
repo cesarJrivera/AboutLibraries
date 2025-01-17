@@ -6,7 +6,7 @@
 -------
 
 <p align="center">
-    <a href="#whats-included-">What's included 🚀</a> &bull;
+    <a href="#whats-included-">What's included ,🔀</a> &bull;
     <a href="#setup">Setup 🛠️</a> &bull;
     <a href="#gradle-api">Gradle API️</a> &bull;
     <a href="MIGRATION.md">Migration Guide 🧬</a> &bull;
@@ -27,7 +27,7 @@
   - Different exports, compliance report
   - Identify possible project funding
   - License *strict mode*
-- Simple and fast integration
+- Simple and fast integration🔒
 
 # Screenshots
 
@@ -442,4 +442,4 @@ Additional dependencies can be provided via the plugins API to extend and provid
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
-    limitations under the License.
+    limitations under the License.🔒
