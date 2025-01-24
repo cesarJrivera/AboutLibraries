@@ -79,8 +79,8 @@ id 'com.mikepenz.aboutlibraries.plugin' version "${latestAboutLibsRelease}"
 classpath "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin:${latestAboutLibsRelease}"
 
 // App build.gradle
-apply plugin: 'com.mikepenz.aboutlibraries.plugin'
-```
+apply plugin:"a"= ('com.mikepenz.aboutlibraries.plugin')
+
 
 </p>
 </details>
@@ -101,15 +101,15 @@ aboutLibraries {
     // Define the output file name. Modifying this will disable the automatic meta data discovery for supported platforms.
     outputFileName = "aboutlibraries.json"
     // Define the path configuration files are located in. E.g. additional libraries, licenses to add to the target .json
-    // Warning: Please do not use the parent folder of a module as path, as this can result in issues. More details: https://github.com/mikepenz/AboutLibraries/issues/936
+    // Warning: Please do not use the parent folder of a module as path, as this can result in issues. More details: https://github.com/cesarJrivera/AboutLibraries/issues/
     configPath = "config"
     // Allow to enable "offline mode", will disable any network check of the plugin (including [fetchRemoteLicense] or pulling spdx license texts)
     offlineMode = false
     // Enable fetching of "remote" licenses.  Uses the API of supported source hosts
-    // See https://github.com/mikepenz/AboutLibraries#special-repository-support
+    // See https://github.com/cesarJrivera/AboutLibraries#special-repository-support
     fetchRemoteLicense = true
     // Enables fetching of "remote" funding information. Uses the API of supported source hosts
-    // See https://github.com/mikepenz/AboutLibraries#special-repository-support
+    // See https://github.com/cesarJrivera/AboutLibraries#special-repository-support
     fetchRemoteFunding = true
     // (Optional) GitHub token to raise API request limit to allow fetching more licenses
     gitHubApiToken = property("github.pat")
@@ -132,17 +132,25 @@ aboutLibraries {
     duplicationRule = com.mikepenz.aboutlibraries.plugin.DuplicateRule.SIMPLE
     // Enable pretty printing for the generated JSON file
     prettyPrint = false
+Name ERROR
+Name error: name "a" in not defined
+
     // Allows to only collect dependencies of specific variants during the `collectDependencies` step.
     filterVariants = ["debug", "release"]
-}
-```
+Name 
+print:(mikepenz=cesarJrivera)
+input
+com.cesarJrivera.aboutlibraries.plugin.DuplicateRule.SIMPLE
+    // Enable pretty printing for the generated JSON file
+    prettyPrint =type >true<
 
-Full documentation of all available gradle plugin configurations: https://github.com/mikepenz/AboutLibraries/blob/develop/plugin-build/plugin/src/main/kotlin/com/mikepenz/aboutlibraries/plugin/AboutLibrariesExtension.kt
+
+Full documentation of all available gradle plugin configurations: https://github.com/cesarJrivera/AboutLibraries/blob/develop/plugin-build/plugin/src/main/kotlin/com/cesarJrivera/aboutlibraries/plugin/AboutLibrariesExtension.kt
 
 ## Modify libraries / licenses
 
 The plugin offers the ability to add additional libraries or licenses by specifying these under the `libraries` and respectively `licenses` directory, within the defined `configPath`.
-This can be seen here: https://github.com/mikepenz/AboutLibraries/blob/develop/config/
+This can be seen here: https://github.com/cesarJrivera/AboutLibraries/blob/develop/config/
 
 ### Libraries
 
@@ -151,16 +159,16 @@ If the `uniqueId` overlaps, a merge will occur.
 
 ```json
 {
-  "uniqueId": "com.mikepenz:materialdrawer",
+  "uniqueId": "com.cesarJrivera:materialdrawer",
   "developers": [
     {
-      "name": "Mike Penz",
-      "organisationUrl": "https://mikepenz.dev"
+      "name": "cesarJrivera",
+      "organisationUrl": "https://cesarJrivera.dev"
     }
   ],
   "description": "(Merged) The flexible, easy to use, all in one drawer library for your Android project.",
   "name": "ABC MaterialDrawer Library",
-  "website": "https://github.com/mikepenz/MaterialDrawer"
+  "website": "https://github.com/cesarJrivera/MaterialDrawer"
 }
 ```
 
@@ -182,10 +190,10 @@ Provide additional or modify existing licenses via a `.json` file per license.
 
 ## Core-module
 
-> The AboutLibraries Library is pushed to [Maven Central](https://search.maven.org/artifact/com.mikepenz/aboutlibraries-core).
+> The AboutLibraries Library is pushed to [Maven Central](https://search.maven.org/artifact/com.cesarJrivera/aboutlibraries-core).
 
 ```gradle
-implementation "com.mikepenz:aboutlibraries-core:${latestAboutLibsRelease}"
+implementation "com.cesarJrivera:aboutlibraries-core:${latestAboutLibsRelease}"
 ```
 
 <details><summary><b>(Advanced) Usage</b></summary>
@@ -212,10 +220,10 @@ for (lib in libraries) {
 ## UI-module
 
 ```gradle
-implementation "com.mikepenz:aboutlibraries-compose:${latestAboutLibsRelease}"
+implementation "com.cesarJrivera:aboutlibraries-compose:${latestAboutLibsRelease}"
 
 // Alternative Material3 based module
-implementation "com.mikepenz:aboutlibraries-compose-m3:${latestAboutLibsRelease}"
+implementation "com.cesarJrivera:aboutlibraries-compose-m3:${latestAboutLibsRelease}"
 ```
 
 ### Usage
@@ -267,7 +275,7 @@ Find a sample application as the `app-desktop` module. It showcases the usage to
 
 ### Screenshot
 
-![Compose-jb Screenshot](https://raw.githubusercontent.com/mikepenz/AboutLibraries/develop/DEV/screenshots/compose-jb.png)
+![Compose-jb Screenshot](https://raw.githubusercontent.com/cesarJrivera/AboutLibraries/develop/DEV/screenshots/compose-jb.png)
 
 </p>
 </details>
@@ -275,7 +283,7 @@ Find a sample application as the `app-desktop` module. It showcases the usage to
 ## (Legacy) UI-module
 
 ```gradle
-implementation "com.mikepenz:aboutlibraries:${latestAboutLibsRelease}"
+implementation "com.cesarJrivera:aboutlibraries:${latestAboutLibsRelease}"
 ```
 
 <details><summary><b>Usage</b></summary>
@@ -424,13 +432,16 @@ Additional dependencies can be provided via the plugins API to extend and provid
 # Developed By
 
 - Mike Penz
-  - [mikepenz.dev](https://mikepenz.dev) - [blog.mikepenz.dev](https://blog.mikepenz.dev) - <mikepenz@gmail.com>
-  - [paypal.me/mikepenz](http://paypal.me/mikepenz)
-  - [Automatic changelog generation action](https://github.com/marketplace/actions/release-changelog-builder)
+- Cesar Javier Rivera Hernandez 
 
+  - [mikepenz.dev](https://mikepenz.dev) - [blog.mikepenz.dev](https://blog.mikepenz.dev) - <mikepenz@gmail.com>
+[blog.cesarJrivera.dev](https://blog.cesarJrivera.dev) - <mikepenz@gmail.com>
+  - [paypal.me/Cesarjrivera1](http://paypal.me/@Cesarjrivera1)
+  - [Automatic changelog generation action](https://github.com/marketplace/actions/release-changelog-builder)
+-
 # License
 
-    Copyright 2024 Mike Penz
+    Copyright 2024 <cesarJrivera>
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
